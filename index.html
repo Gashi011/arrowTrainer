@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Arrow Funkcije Trener</title>
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="40 zadataka za vežbanje JavaScript arrow funkcija, od početnog do naprednog nivoa.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -59,5 +64,13 @@
   </div>
 </main>
 <script src="script.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js")
+        .catch(error => console.error("Service Worker registration failed:", error));
+    });
+  }
+</script>
 </body>
 </html>
