@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Arrow Funkcije Trener</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header>
+    <div>
+      <p class="eyebrow">JavaScript vežbanje</p>
+      <h1>Arrow Funkcije Trener</h1>
+      <p class="sub">40 zadataka od najlakših do najtežih. Piši kod, pokreni testove, koristi hint i otkrij rešenje tek kad zapneš.</p>
+    </div>
+    <div class="progress-card">
+      <div class="progress-line"><span id="progressText">0 / 40 rešeno</span><span id="levelText">Nivo 1</span></div>
+      <div class="track"><div id="bar"></div></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <div class="aside-head"><h2>Zadaci</h2><button id="resetBtn" class="ghost mini">Resetuj</button></div>
+      <div id="list"></div>
+    </aside>
+
+    <section class="workspace">
+      <div class="card">
+        <div class="head-row">
+          <div><span id="num" class="pill"></span><span id="difficulty" class="pill muted-pill"></span></div>
+          <div class="nav"><button id="prev" class="ghost">← Prethodni</button><button id="next" class="ghost">Sledeći →</button></div>
+        </div>
+
+        <h2 id="title"></h2>
+        <p id="desc" class="desc"></p>
+        <div class="focus"><b>Fokus:</b> <span id="concept"></span></div>
+
+        <label for="editor">Tvoje rešenje</label>
+        <textarea id="editor" spellcheck="false"></textarea>
+
+        <div class="actions">
+          <button id="check" class="primary">Proveri rešenje</button>
+          <button id="hint" class="ghost">Hint</button>
+          <button id="solution" class="ghost">Prikaži rešenje</button>
+        </div>
+
+        <div id="feedback" class="box hidden"></div>
+        <div id="hintBox" class="box hidden"><b>Hint</b><p id="hintText"></p></div>
+        <div id="solutionBox" class="box hidden"><b>Jedno moguće rešenje</b><pre><code id="solutionCode"></code></pre></div>
+      </div>
+
+      <div class="card note">
+        <h3>Kako da koristiš aplikaciju</h3>
+        <p>Rešenje ne mora da bude identično prikazanom odgovoru. Aplikacija pokreće testove nad funkcijom koju napišeš. Napredak i tvoj kod čuvaju se lokalno u browseru.</p>
+      </div>
+    </section>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
